@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>About me</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.style.css') }}">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="max-width">
+        <div class="logocontent">
+            <a class="teamlogo" href="https://xenofium.tk" target="_blank">Xenofium</a>
+            <a class='postlogo' href="#">Projects</a>
+        </div>
+        <ul class="menu">
+            <li><a href="/" class="menu-btn">About</a></li>
+            <li><a href="/game" class="menu-btn">Game</a></li>
+            <li><a href="/leaderboard" class="menu-btn">Leaderboard</a></li>
+        </ul>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+<div class="navdiv" style="width:100%;height:95px;"></div>
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About me</h2>
+        <div class="about-content">
+            <div class="column left">
+                <svg version="1.1" id="image" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+						<g id="layer1">
+							<path class="s0" d="M52.0440025,114.0434952"></path>
+                            <polygon class="s1"
+                                     points="50.8544998,16.9514999 44.1720009,32.5439987 24.1245003,32.5439987 30.8070011,16.9514999"></polygon>
+                            <polygon class="s2"
+                                     points="93.4215012,75 124.2509995,117.4559937 117.5685043,133.0484924 84.2220001,87.2294998 74.1989975,100.5719986 50.8544998,133.0484924 44.1720009,117.4559937 64.9769974,88.3199997 75,75 84.2220001,62.7705002 117.5685043,16.9514999 124.2509995,32.5439987"></polygon>
+                            <polygon class="s3"
+                                     points="50.8544998,133.0484924 30.8070011,133.0484924 24.1245003,117.4559937 44.1720009,117.4559937"></polygon>
+                            <polygon class="s1"
+                                     points="117.5685043,16.9514999 84.2220001,62.7705002 75,75 64.9769974,88.3199997 44.1720009,117.4559937 24.1245003,117.4559937 54.9524994,75 24.1245003,32.5439987 44.1720009,32.5439987 64.9769974,61.6800003 74.1989975,49.4280014 97.5209961,16.9514999"></polygon>
+                            <polygon class="s2"
+                                     points="74.1989975,49.4280014 50.8544998,16.9514999 44.1720009,32.5439987 64.9769974,61.6800003"></polygon>
+                            <polygon class="s3"
+                                     points="117.5685043,133.0484924 97.5209961,133.0484924 74.1989975,100.5719986 84.2220001,87.2294998"></polygon>
+						</g>
+					</svg>
+            </div>
+            <div class="column right">
+                <div class="text">I`m Vladislav <span>Uhwatov</span></div>
+                <p>Young developer, member of the <span><a
+                        href="http://xenofium.herokuapp.com"><b>Xenofium</b></a></span> project. Student Of The Academy
+                    Of Geniuses. I present to you my project - <span>TagGame</span>. It was written during the course of
+                    this course.Thanks to the Python programming language, I was able to put the project together. A
+                    leaderboard will be implemented in the future.</p>
+                <div class="button">
+                    <a href="/game">Game</a>
+                </div>
+                <div class="button toleaderboard">
+                    <a href="/leaderboard">Leaderboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if (this.scrollY > 20) {
+                $('.navbar').addClass("sticky")
+            } else {
+                $('.navbar').removeClass("sticky")
+            }
+
+            if (this.scrollY > 500) {
+                $('.scroll-up-btn').addClass("show")
+            } else {
+                $('.scroll-up-btn').removeClass("show")
+            }
+        })
+        $('.navbar .menu li a').click(function () {
+            $('html').css("scrollBehavior", "smooth")
+        })
+
+        $('.menu-btn').click(function () {
+            $('.navbar .menu').toggleClass("active")
+            $('.menu-btn i').toggleClass("active")
+            })
+    })
+</script>
+</body>
+</html>

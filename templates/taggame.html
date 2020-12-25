@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Puzzle game</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/taggame.style.css') }}">
+
+</head>
+
+<body>
+	<div class="box">
+		<div class="game">
+			<div class="header">
+				<span id="move">Move: 100</span>
+                <span id="time">Time: 100</span>
+            </div>
+            <div class="grid">
+                {% for i in range(1,16) %}
+                <button>{{ i }}</button>
+                {% endfor %}
+            </div>
+            <div class="footer">
+                <button class="button"><span>Play</span></button>
+            </div>
+        </div>
+        <div class="message">
+            <div class="card">
+                <form method="POST" class="additional">
+                    <div class="user-card">
+                        <div class="stats center">
+                            <span>Moves</span>
+                            <input id='inputmoves' type="text" name="moves" value='50' readonly>
+                        </div>
+                        <div class="img center"></div>
+                        <div class="stats bottom center">
+                            <span>Time</span>
+                            <input type="text" id='inputtime' name="time" value='50' readonly>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <h1>Username</h1>
+                            <div class="coords">
+                                <span>Go to the leaderboard and see where you are. Soon we will add more games and count the number of points, which will allow us to more accurately identify your position, so do not forget to follow us.</span>
+                                <input type="submit" class='center' value="Check">
+                            </div>
+                    </div>
+                </form>
+                <div class="general">
+                    <h1>Congrats</h1>
+                    <p>You won my game and proved that you deserve to stand next to other people on the leaderboard!</p>
+                    <span class="more">Hover me to continue</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/taggame.script.js') }}"></script>
+</body>
+</html>

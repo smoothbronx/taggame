@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    -webkit-user-select: none;
+    font-family: 'Nunito';
+}
+
+
+body {
+    height: 100bh;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background: linear-gradient(#f8f8f8, #fff);
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgb(40,40,40)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
+    padding: 10px;
+}
+
+.grid button{
+    margin: 5px;
+    background: linear-gradient(#f8f8f8, #fff);
+    color: #434343;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid #434343;
+}
+
+.footer, header {
+    display: flex;
+    justify-content: center;
+}
+
+.footer button {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    border-radius: 20px;
+    background-color: white;
+    color: #434343;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    border: 3px solid #434343;
+    transition: .2s linear;
+}
+
+.footer button:hover {
+    border-color: #434343;
+    color: black;
+}
+
+
+.header {
+    padding: 5px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #434343;
+}
+
+.header span {
+    margin: 15px;
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #434343;
+    font-weight: bold;
+}
+
+.message, .center, .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.message {
+    width: 100vw;
+    height: 100vh;
+    background: #434343;
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 4px 16px #2e2e2e;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: rgb(40,40,40);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .stats {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgb(55,55,55);
+  padding: 5px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .bottom {
+  top: 85%;
+}
+
+
+.card .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+
+.img {
+    width: 110px;
+    height: 110px;
+    background-image: url('http://ferroconcrete.com/ferro/assets/uploads/2015/04/destinationamerica_02_icon-fireworks-768x432.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    background-position: -40px;
+}
+
+.card .additional .user-card .stats input {
+    display: initial;
+    height: 15px;
+    min-width: 10px;
+    width: max-content;
+    max-width: 30px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.card .additional form .coords input {
+    top: 85%;
+    left: 65%;
+    width: 90px;
+    height: 30px;
+    color: white;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.card .additional form .coords input:hover {
+    background: #fff;
+    color: black;
+    border-color: black;
+}
