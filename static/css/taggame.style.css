@@ -247,7 +247,7 @@ body {
     color: white;
 }
 
-.card .additional form .coords input {
+.card .additional .coords input {
     top: 85%;
     left: 65%;
     width: 90px;
@@ -258,7 +258,7 @@ body {
     border-radius: 10px;
 }
 
-.card .additional form .coords input:hover {
+.card .additional .coords input:hover {
     background: #fff;
     color: black;
     border-color: black;

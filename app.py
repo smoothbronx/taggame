@@ -84,6 +84,11 @@ def taggame():
     return render_template('taggame.html')
 
 
+@application.route('/download')
+def download():
+    return render_template('download.html')
+
+
 @application.route('/')
 def redirect_to_the_index():
     return redirect(url_for('index'))
